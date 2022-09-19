@@ -35,5 +35,9 @@ function SignInButton() {
 }
 
 function SignOutButton() {
-  return <button onClick={() => auth.signOut}>サインアウト</button>;
+  return <button onClick={() => auth.signOut()}>サインアウト</button>;
+}
+
+function UserInfo() {
+  return <div>ユーザー情報</div>;
 }
