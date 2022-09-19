@@ -33,3 +33,7 @@ function SignInButton() {
 
   return <button onClick={signInWithGoogle}>グーグルでサインイン</button>;
 }
+
+function SignOutButton() {
+  return <button onClick={() => auth.signOut}>サインアウト</button>;
+}
