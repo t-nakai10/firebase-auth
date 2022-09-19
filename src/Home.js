@@ -4,11 +4,21 @@ import { auth, provider } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 function Home() {
+  // useAuthState で認証状態を管理, この状態を利用して表示するものを変更する.
   const [user] = useAuthState(auth);
 
   return (
     <div>
-      <SignInButton />
+      {user ? (
+        // ログインしていたら.
+        <>
+          <UserInfo />
+          <SignOutButton />
+        </>
+      ) : (
+        // ログインしていなかったら.
+        <SignInButton />
+      )}
     </div>
   );
 }
