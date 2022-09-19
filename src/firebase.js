@@ -13,5 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // 認証.
 const auth = getAuth(app);
-// グーグルプロバイダー
+// グーグルプロバイダー.
 const provider = new GoogleAuthProvider();
+
+export { auth, provider };
